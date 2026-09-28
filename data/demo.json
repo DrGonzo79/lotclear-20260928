@@ -1,0 +1,14 @@
+{
+  "notice": "Fictional demonstration data. No DMV, lender, dealer management system, or customer data is connected.",
+  "requirements": {
+    "FL": {"name":"Florida","slaDays":12,"items":["signed_title","odometer_statement","bill_of_sale","insurance_proof"],"notes":"A separate odometer disclosure is required in this demo ruleset for vehicles under 20 years old."},
+    "GA": {"name":"Georgia","slaDays":10,"items":["signed_title","mv1_application","bill_of_sale","lien_release"],"notes":"The demo requires Form MV-1 and a lien release when the source title shows a lien."},
+    "NC": {"name":"North Carolina","slaDays":15,"items":["notarized_title","mvr1_application","damage_disclosure","odometer_statement"],"notes":"The demo ruleset checks notarization and state-specific disclosures before submission."}
+  },
+  "documents": {"signed_title":"Assigned title","notarized_title":"Notarized assigned title","odometer_statement":"Odometer disclosure","bill_of_sale":"Bill of sale","insurance_proof":"Insurance proof","mv1_application":"Form MV-1","mvr1_application":"Form MVR-1","lien_release":"Lien release","damage_disclosure":"Damage disclosure"},
+  "deals": [
+    {"id":"D-1842","buyer":"Maya Chen","vehicle":"2022 Honda CR-V","vinSuffix":"4182","state":"FL","ageYears":4,"hasLien":false,"documents":["signed_title","bill_of_sale","insurance_proof"],"bankHold":24750},
+    {"id":"D-1917","buyer":"Theo Brooks","vehicle":"2020 Ford F-150","vinSuffix":"9071","state":"GA","ageYears":6,"hasLien":true,"documents":["signed_title","mv1_application","bill_of_sale"],"bankHold":31900},
+    {"id":"D-2024","buyer":"Avery Patel","vehicle":"2024 Toyota Camry","vinSuffix":"6630","state":"NC","ageYears":2,"hasLien":false,"documents":["notarized_title","mvr1_application","damage_disclosure","odometer_statement"],"bankHold":28600}
+  ]
+}
